@@ -5,7 +5,7 @@ namespace WalksAPI.Data
 {
     public class WalksDbContext: DbContext
     {
-        public WalksDbContext(DbContextOptions contextOptions):base(contextOptions) 
+        public WalksDbContext(DbContextOptions<WalksDbContext> contextOptions):base(contextOptions) 
         {
 
         }
