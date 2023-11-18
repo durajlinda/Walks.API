@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using WalksAPI.CustomActionFilters;
 using WalksAPI.Models.Domain;
 using WalksAPI.Models.DTO;
 using WalksAPI.Repositories;
@@ -42,6 +43,7 @@ namespace WalksAPI.Controllers
         }
 
         [HttpPost]
+        [ValidateModel]
         [Route("api/AddRegion")]
         public async Task<IActionResult> Create([FromBody] AddRegionRequestDTO addRegionRequest)
         {  
@@ -58,6 +60,7 @@ namespace WalksAPI.Controllers
         }
 
         [HttpPut]
+        [ValidateModel]
         [Route("api/UpdateRegion/{id}")]
         public async Task<IActionResult> Update(Guid id, [FromBody] UpdateReionsRequestDTO updateRegionRequest)
         {
