@@ -74,3 +74,5 @@ C:\Users\User\Documents\GitHub\Walks.API\WalksAPI\WalksAPI\obj\Debug\net7.0\refi
 C:\Users\User\Documents\GitHub\Walks.API\WalksAPI\WalksAPI\obj\Debug\net7.0\WalksAPI.pdb
 C:\Users\User\Documents\GitHub\Walks.API\WalksAPI\WalksAPI\obj\Debug\net7.0\WalksAPI.genruntimeconfig.cache
 C:\Users\User\Documents\GitHub\Walks.API\WalksAPI\WalksAPI\obj\Debug\net7.0\ref\WalksAPI.dll
+C:\Users\User\Documents\GitHub\Walks.API\WalksAPI\WalksAPI\bin\Debug\net7.0\AutoMapper.dll
+C:\Users\User\Documents\GitHub\Walks.API\WalksAPI\WalksAPI\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

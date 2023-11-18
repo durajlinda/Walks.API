@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using WalksAPI.Data;
+using WalksAPI.Mappings;
+using WalksAPI.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +13,10 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<WalksDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("WalksConnectionString")));
+builder.Services.AddScoped<IRegion, RegionRepository>();
+builder.Services.AddScoped<IWalkRepository, SQLWalkRepository>();
+
+builder.Services.AddAutoMapper(typeof(AutoMapperProfiles));
 
 var app = builder.Build();
 
