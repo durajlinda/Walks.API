@@ -1,8 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.Text.Json;
-using System.Text;
-using Walks.UI.Models.DTO;
 using Walks.UI.Models;
+using Walks.UI.Models.DTO;
+using System.Net.Http.Headers;
+using System.Reflection;
+using System.Text;
+using System.Text.Json;
 
 namespace Walks.UI.Controllers
 {
@@ -25,7 +27,7 @@ namespace Walks.UI.Controllers
                 // Get All Regions from Web API
                 var client = httpClientFactory.CreateClient();
 
-                var httpResponseMessage = await client.GetAsync("https://localhost:7182/Regions");
+                var httpResponseMessage = await client.GetAsync("https://localhost:7135/api/regions");
 
                 httpResponseMessage.EnsureSuccessStatusCode();
 
@@ -55,7 +57,7 @@ namespace Walks.UI.Controllers
             var httpRequestMessage = new HttpRequestMessage()
             {
                 Method = HttpMethod.Post,
-                RequestUri = new Uri("https://localhost:7182/Regions"),
+                RequestUri = new Uri("https://localhost:7135/api/regions"),
                 Content = new StringContent(JsonSerializer.Serialize(model), Encoding.UTF8, "application/json")
             };
 
@@ -78,7 +80,7 @@ namespace Walks.UI.Controllers
         {
             var client = httpClientFactory.CreateClient();
 
-            var response = await client.GetFromJsonAsync<RegionDto>($"https://localhost:7182/Regions/{id.ToString()}");
+            var response = await client.GetFromJsonAsync<RegionDto>($"https://localhost:7135/api/regions/{id.ToString()}");
 
             if (response is not null)
             {
@@ -97,7 +99,7 @@ namespace Walks.UI.Controllers
             var httpRequestMessage = new HttpRequestMessage()
             {
                 Method = HttpMethod.Put,
-                RequestUri = new Uri($"https://localhost:7182/Regions/{request.Id}"),
+                RequestUri = new Uri($"https://localhost:7135/api/regions/{request.Id}"),
                 Content = new StringContent(JsonSerializer.Serialize(request), Encoding.UTF8, "application/json")
             };
 
@@ -122,7 +124,7 @@ namespace Walks.UI.Controllers
             {
                 var client = httpClientFactory.CreateClient();
 
-                var httpResponseMessage = await client.DeleteAsync($"https://localhost:7182/Regions/{request.Id}");
+                var httpResponseMessage = await client.DeleteAsync($"https://localhost:7135/api/regions/{request.Id}");
 
                 httpResponseMessage.EnsureSuccessStatusCode();
 
@@ -137,4 +139,6 @@ namespace Walks.UI.Controllers
         }
     }
 }
+    
+
 

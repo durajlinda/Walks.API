@@ -1,11 +1,23 @@
 {
   "Version": 1,
-  "Hash": "8NCXW/3qbLJ/Zjq/WePASYwkotbYwkhr70UUYTThlyk=",
+  "Hash": "Z/DRp6dIfb0TK7aK8vU/MeE96DEPTmWZZEUYvVSo+bI=",
   "Source": "Walks.UI",
   "BasePath": "_content/Walks.UI",
   "Mode": "Default",
   "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\User\\Documents\\GitHub\\Walks.API\\WalksAPI\\WalksAPI\\WalksAPI.csproj",
+      "Version": 2,
+      "Source": "WalksAPI",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
   "DiscoveryPatterns": [
     {
       "Name": "Walks.UI\\wwwroot",
