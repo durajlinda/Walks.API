@@ -78,3 +78,12 @@ C:\Users\User\Documents\GitHub\Walks.API\WalksAPI\WalksAPI\bin\Debug\net7.0\Auto
 C:\Users\User\Documents\GitHub\Walks.API\WalksAPI\WalksAPI\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\User\Documents\GitHub\Walks.API\WalksAPI\WalksAPI\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\User\Documents\GitHub\Walks.API\WalksAPI\WalksAPI\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\User\Documents\GitHub\Walks.API\WalksAPI\WalksAPI\bin\Debug\net7.0\Serilog.dll
+C:\Users\User\Documents\GitHub\Walks.API\WalksAPI\WalksAPI\bin\Debug\net7.0\Serilog.AspNetCore.dll
+C:\Users\User\Documents\GitHub\Walks.API\WalksAPI\WalksAPI\bin\Debug\net7.0\Serilog.Extensions.Hosting.dll
+C:\Users\User\Documents\GitHub\Walks.API\WalksAPI\WalksAPI\bin\Debug\net7.0\Serilog.Extensions.Logging.dll
+C:\Users\User\Documents\GitHub\Walks.API\WalksAPI\WalksAPI\bin\Debug\net7.0\Serilog.Formatting.Compact.dll
+C:\Users\User\Documents\GitHub\Walks.API\WalksAPI\WalksAPI\bin\Debug\net7.0\Serilog.Settings.Configuration.dll
+C:\Users\User\Documents\GitHub\Walks.API\WalksAPI\WalksAPI\bin\Debug\net7.0\Serilog.Sinks.Console.dll
+C:\Users\User\Documents\GitHub\Walks.API\WalksAPI\WalksAPI\bin\Debug\net7.0\Serilog.Sinks.Debug.dll
+C:\Users\User\Documents\GitHub\Walks.API\WalksAPI\WalksAPI\bin\Debug\net7.0\Serilog.Sinks.File.dll

@@ -10,21 +10,23 @@ namespace WalksAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    //[Authorize]
     public class RegionsController : ControllerBase
     {
         private readonly IRegion region;
         private readonly IMapper mapper;
+        private readonly ILogger<RegionsController> logger;
 
-        public RegionsController(IRegion region, IMapper mapper)
+        public RegionsController(IRegion region, IMapper mapper, ILogger<RegionsController> logger)
         {
             this.region = region;
             this.mapper = mapper;
+            this.logger = logger;
         }
 
         [HttpGet]
         [Route("api/GetALLRegions")]
-        [Authorize(Roles = "Reader")]
+        //[Authorize(Roles = "Reader")]
         public async Task<IActionResult> GetAll()
         {
            var regionsDomain = await region.GetAllAsync();
@@ -34,7 +36,7 @@ namespace WalksAPI.Controllers
 
         [HttpGet]
         [Route("api/GetRegionById/{id}")]
-        [Authorize(Roles = "Reader")]
+        //[Authorize(Roles = "Reader")]
         public async Task<IActionResult> GetById([FromRoute] Guid id)
         {
             var regionDomain = await region.GetByIdAsync(id);
@@ -49,7 +51,7 @@ namespace WalksAPI.Controllers
         [HttpPost]
         [ValidateModel]
         [Route("api/AddRegion")]
-        [Authorize(Roles = "Writer")]
+        //[Authorize(Roles = "Writer")]
         public async Task<IActionResult> Create([FromBody] AddRegionRequestDTO addRegionRequest)
         {  
             var regionDomain = new Region
@@ -67,7 +69,7 @@ namespace WalksAPI.Controllers
         [HttpPut]
         [ValidateModel]
         [Route("api/UpdateRegion/{id}")]
-        [Authorize(Roles = "Writer")]
+        //[Authorize(Roles = "Writer")]
         public async Task<IActionResult> Update(Guid id, [FromBody] UpdateReionsRequestDTO updateRegionRequest)
         {
 
@@ -92,7 +94,7 @@ namespace WalksAPI.Controllers
 
         [HttpDelete]
         [Route("api/DeleteRegion/{id}")]
-        [Authorize(Roles = "Writer")]
+        //[Authorize(Roles = "Writer")]
         public async Task<IActionResult> Delete(Guid id)
         {
             var regionDomain = await region.DeleteAsync(id);
